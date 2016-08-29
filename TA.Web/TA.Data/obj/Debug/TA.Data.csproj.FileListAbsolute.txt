@@ -1,0 +1,9 @@
+D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Data\bin\Debug\TA.Data.dll.config
+D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Data\bin\Debug\TA.Data.dll
+D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Data\bin\Debug\TA.Data.pdb
+D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Data\bin\Debug\EntityFramework.dll
+D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Data\bin\Debug\EntityFramework.xml
+D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Data\obj\Debug\TA.Data.dll
+D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Data\obj\Debug\TA.Data.pdb
