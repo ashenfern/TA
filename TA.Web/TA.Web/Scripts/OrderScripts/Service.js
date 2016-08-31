@@ -32,7 +32,7 @@
     this.AddBook = function (book) {
         var response = $http({
             method: "post",
-            url: "Home/AddBook",
+            url: "http://localhost:13822/api/Orders",
             data: JSON.stringify(book),
             dataType: "json"
         });

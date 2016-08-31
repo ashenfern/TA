@@ -16,3 +16,4 @@ D:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\bin\Debug\EntityFramework.xml
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\bin\Debug\EntityFramework.SqlServer.xml
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\obj\Debug\TA.Data.dll
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\obj\Debug\TA.Data.pdb
+D:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\obj\Debug\TA.Data.csprojResolveAssemblyReference.cache
