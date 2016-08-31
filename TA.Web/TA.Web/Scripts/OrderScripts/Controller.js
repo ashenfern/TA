@@ -15,12 +15,14 @@
     $scope.editOrder = function (order) {
         var getOrderData = crudAJService.getOrder(order.Id);
         getOrderData.then(function (_order) {
-            $scope.book = _oreder.data;
-            $scope.bookId = order.Id;
-            $scope.bookTitle = order.Title;
-            $scope.bookAuthor = order.Author;
-            $scope.bookPublisher = order.Publisher;
-            $scope.bookIsbn = order.Isbn;
+            $scope.oreder = _oreder.data;
+            $scope.orderId = order.Id;
+            $scope.Description = order.Description;
+            $scope.CustomerName = order.CustomerName;
+            $scope.CustomerAddress = order.CustomerAddress;
+            $scope.ItemName = order.ItemName;
+            $scope.Quantity = order.Quantity;
+            $scope.Date = order.Date;
             $scope.Action = "Update";
             $scope.divOrder = true;
         }, function () {
@@ -79,11 +81,12 @@
     }
 
     function ClearFields() {
-        $scope.bookId = "";
-        $scope.bookTitle = "";
-        $scope.bookAuthor = "";
-        $scope.bookPublisher = "";
-        $scope.bookIsbn = "";
+        $scope.Description = "";
+        $scope.CustomerName = "";
+        $scope.CustomerAddress = "";
+        $scope.ItemName = "";
+        $scope.Quantity = "";
+        $scope.Date = "";
     }
     $scope.Cancel = function () {
         $scope.divOrder = false;
