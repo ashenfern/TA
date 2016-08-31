@@ -112,3 +112,7 @@ D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\Microsoft.Owin.Security.Twitter
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\obj\Debug\TA.Web.dll
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\obj\Debug\TA.Web.pdb
+D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\TA.Business.dll
+D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\TA.ServiceFacade.dll
+D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\TA.Business.pdb
+D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\TA.ServiceFacade.pdb

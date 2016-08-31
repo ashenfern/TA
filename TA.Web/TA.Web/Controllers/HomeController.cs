@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TA.Business;
 using TA.Data;
 using TA.Web.Models;
 
@@ -25,7 +26,7 @@ namespace TA.Web.Controllers
                 return Json(orderList, JsonRequestBehavior.AllowGet);
             }
         }
-        //GET: Book by Id
+        //GET: Order by Id
         public JsonResult GetOrderById(string id)
         {
             using (OrderDBContext contextObj = new OrderDBContext())
@@ -44,10 +45,7 @@ namespace TA.Web.Controllers
         //        {
         //            int orderId = Convert.ToInt32(order.Id);
         //            Order _order = contextObj.order.Where(b => b.Id == orderId).FirstOrDefault();
-        //            _order.Title = order.Title;
-        //            _order.Author = order.Author;
-        //            _order.Publisher = order.Publisher;
-        //            _order.Isbn = order.Isbn;
+
         //            contextObj.SaveChanges();
         //            return "Order record updated successfully";
         //        }
@@ -58,21 +56,23 @@ namespace TA.Web.Controllers
         //    }
         //}
         // Add book
-        public string AddOrder(Order order)
+        public void AddOrder(Order order)
         {
-            if (order != null)
-            {
-                using (OrderDBContext contextObj = new OrderDBContext())
-                {
-                    contextObj.order.Add(order);
-                    contextObj.SaveChanges();
-                    return "Order record added successfully";
-                }
-            }
-            else
-            {
-                return "Invalid order record";
-            }
+            //if (order != null)
+            //{
+            //    using (OrderDBContext contextObj = new OrderDBContext())
+            //    {
+            //        contextObj.order.Add(order);
+            //        contextObj.SaveChanges();
+            //        return "Order record added successfully";
+            //    }
+            //}
+            //else
+            //{
+            //    return "Invalid order record";
+            //}
+
+            new OrderBusinessManager().AddOrder(order);
         }
         // Delete book
         public string DeleteOrder(string orderId)
