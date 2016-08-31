@@ -10,90 +10,90 @@ namespace TA.Web.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Book
+        // GET: Order
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: All books
-        public JsonResult GetAllBooks()
+        // GET: All orders
+        public JsonResult GetAllOrders()
         {
             using (OrderDBContext contextObj = new OrderDBContext())
             {
-                var bookList = contextObj.order.ToList();
-                return Json(bookList, JsonRequestBehavior.AllowGet);
+                var orderList = contextObj.order.ToList();
+                return Json(orderList, JsonRequestBehavior.AllowGet);
             }
         }
         //GET: Book by Id
-        public JsonResult GetBookById(string id)
+        public JsonResult GetOrderById(string id)
         {
             using (OrderDBContext contextObj = new OrderDBContext())
             {
-                var bookId = Convert.ToInt32(id);
-                var getBookById = contextObj.order.Find(bookId);
-                return Json(getBookById, JsonRequestBehavior.AllowGet);
+                var orderId = Convert.ToInt32(id);
+                var getOrderById = contextObj.order.Find(orderId);
+                return Json(getOrderById, JsonRequestBehavior.AllowGet);
             }
         }
         //Update Book
-        public string UpdateBook(Order book)
-        {
-            if (book != null)
-            {
-                using (OrderDBContext contextObj = new OrderDBContext())
-                {
-                    int bookId = Convert.ToInt32(book.Id);
-                    Order _book = contextObj.order.Where(b => b.Id == bookId).FirstOrDefault();
-                    _book.Title = book.Title;
-                    _book.Author = book.Author;
-                    _book.Publisher = book.Publisher;
-                    _book.Isbn = book.Isbn;
-                    contextObj.SaveChanges();
-                    return "Book record updated successfully";
-                }
-            }
-            else
-            {
-                return "Invalid book record";
-            }
-        }
+        //public string UpdateOrder(Order order)
+        //{
+        //    if (order != null)
+        //    {
+        //        using (OrderDBContext contextObj = new OrderDBContext())
+        //        {
+        //            int orderId = Convert.ToInt32(order.Id);
+        //            Order _order = contextObj.order.Where(b => b.Id == orderId).FirstOrDefault();
+        //            _order.Title = order.Title;
+        //            _order.Author = order.Author;
+        //            _order.Publisher = order.Publisher;
+        //            _order.Isbn = order.Isbn;
+        //            contextObj.SaveChanges();
+        //            return "Order record updated successfully";
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return "Invalid order record";
+        //    }
+        //}
         // Add book
-        public string AddBook(Order book)
+        public string AddOrder(Order order)
         {
-            if (book != null)
+            if (order != null)
             {
                 using (OrderDBContext contextObj = new OrderDBContext())
                 {
-                    contextObj.order.Add(book);
+                    contextObj.order.Add(order);
                     contextObj.SaveChanges();
-                    return "Book record added successfully";
+                    return "Order record added successfully";
                 }
             }
             else
             {
-                return "Invalid book record";
+                return "Invalid order record";
             }
         }
         // Delete book
-        public string DeleteBook(string bookId)
+        public string DeleteOrder(string orderId)
         {
 
-            if (!String.IsNullOrEmpty(bookId))
+            if (!String.IsNullOrEmpty(orderId))
             {
                 try
                 {
-                    int _bookId = Int32.Parse(bookId);
+                    int _orderId = Int32.Parse(orderId);
                     using (OrderDBContext contextObj = new OrderDBContext())
                     {
-                        var _book = contextObj.order.Find(_bookId);
-                        contextObj.order.Remove(_book);
+                        var _order = contextObj.order.Find(_orderId);
+                        contextObj.order.Remove(_order);
                         contextObj.SaveChanges();
-                        return "Selected book record deleted sucessfully";
+                        return "Selected order record deleted sucessfully";
                     }
                 }
                 catch (Exception)
                 {
-                    return "Book details not found";
+                    return "Order details not found";
                 }
             }
             else

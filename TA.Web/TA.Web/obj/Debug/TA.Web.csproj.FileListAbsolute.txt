@@ -55,6 +55,7 @@ D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Web\obj\Debug\TA.Web.pdb
 D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Web\obj\Debug\TA.Web.csprojResolveAssemblyReference.cache
 D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Web\bin\TA.Data.dll
 D:\Ashen\Development\TechnicalAssesment\TA.Web\TA.Web\bin\TA.Data.pdb
+D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\obj\Debug\TA.Web.csprojResolveAssemblyReference.cache
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\TA.Web.dll.config
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\TA.Web.dll
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\TA.Web.pdb
@@ -109,6 +110,5 @@ D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\Microsoft.Owin.Security.OAuth.x
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\Microsoft.Owin.Security.Google.xml
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\obj\Debug\TA.Web.csprojResolveAssemblyReference.cache
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\obj\Debug\TA.Web.dll
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Web\obj\Debug\TA.Web.pdb

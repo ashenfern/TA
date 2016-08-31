@@ -11,9 +11,15 @@ namespace TA.Data
     {
         [Key]
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Author { get; set; }
-        public string Publisher { get; set; }
-        public string Isbn { get; set; }
+        public string Description { get; set; }
+        //TODO
+        public string CustomerName { get; set; }
+        public string CustomerAddress { get; set; }
+        //TODO
+        public string ItemName { get; set; }
+        public int Quantity { get; set; }
+        public string Date { get; set; }
+        public virtual Item Item { get; set; }
+        public  virtual Customer customer { get; set; }
     }
 }

@@ -10,5 +10,8 @@ namespace TA.Data
     public class OrderDBContext : DbContext
     {
         public DbSet<Order> order { get; set; }
+        public DbSet<Customer> customer { get; set; }
+        public DbSet<Item> Item { get; set; }
+
     }
 }

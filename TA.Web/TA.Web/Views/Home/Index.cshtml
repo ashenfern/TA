@@ -3,43 +3,46 @@
 }
 <div ng-controller="mvcCRUDCtrl">
     <div class="divList">
-        <p><b><i>Book List</i></b></p>
+        <p><b><i>Orders List</i></b></p>
         <table class="table table-hover">
             <tr>
                 <td><b>ID</b></td>
-                <td><b>Title</b></td>
-                <td><b>Author</b></td>
-                <td><b>Publisher</b></td>
-                <td><b>Isbn</b></td>
-                <td><b>Action</b></td>
+                <td><b>CustomerName</b></td>
+                <td><b>CustomerAddress</b></td>
+                <td><b>ItemName</b></td>
+                <td><b>Quantity</b></td>
+                <td><b>Date</b></td>
             </tr>
-            <tr ng-repeat="book in books">
+            <tr ng-repeat="order in orders">
                 <td>
-                    {{book.Id}}
+                    {{order.Id}}
                 </td>
                 <td>
-                    {{book.Title}}
+                    {{order.CustomerName}}
                 </td>
                 <td>
-                    {{book.Author}}
+                    {{order.CustomerAddress}}
                 </td>
                 <td>
-                    {{book.Publisher}}
+                    {{order.ItemName}}
                 </td>
                 <td>
-                    {{book.Isbn}}
+                    {{order.Quantity}}
                 </td>
                 <td>
-                    <span ng-click="editBook(book)" class="btn btn-primary">Edit</span>
-                    <span ng-click="deleteBook(book)" class="btn btn-danger">Delete</span>
+                    {{order.Date}}
                 </td>
+                @*<td>
+                    <span ng-click="editOrder(order)" class="btn btn-primary">Edit</span>
+                    <span ng-click="deleteOrder(order)" class="btn btn-danger">Delete</span>
+                </td>*@
             </tr>
         </table>
     </div>
-    <span ng-click="AddBookDiv()" class="btn btn-default">
-        Add Book
+    <span ng-click="AddOrderDiv()" class="btn btn-default">
+        Add Order
     </span>
-    <div ng-show="divBook">
+    <div ng-show="divOrder">
         <p class="divHead"></p>
         <table class="table">
             <tr>
@@ -51,31 +54,41 @@
             <tr>
                 <td><b>Id</b></td>
                 <td>
-                    <input type="text" disabled="disabled" ng-model="bookId" />
+                    <input type="text" disabled="disabled" ng-model="orderId" />
                 </td>
-                <td><b>Title</b></td>
+                <td><b>Description</b></td>
                 <td>
-                    <input type="text" ng-model="bookTitle" />
-                </td>
-            </tr>
-            <tr>
-                <td><b>Author</b></td>
-                <td>
-                    <input type="text" ng-model="bookAuthor" />
-                </td>
-                <td><b>Publisher</b></td>
-                <td>
-                    <input type="text" ng-model="bookPublisher" />
+                    <input type="text" ng-model="Description" />
                 </td>
             </tr>
             <tr>
-                <td><b>Isbn</b></td>
+                <td><b>CustomerName</b></td>
                 <td>
-                    <input type="text" ng-model="bookIsbn" />
+                    <input type="text" ng-model="CustomerName" />
+                </td>
+                <td><b>CustomerAddress</b></td>
+                <td>
+                    <input type="text" ng-model="CustomerAddress" />
+                </td>
+            </tr>
+            <tr>
+                <td><b>ItemName</b></td>
+                <td>
+                    <input type="text" ng-model="ItemName" />
+                </td>
+                <td><b>Quantity</b></td>
+                <td>
+                    <input type="text" ng-model="Quantity" />
+                </td>
+            </tr>
+            <tr>
+                <td><b>Date</b></td>
+                <td>
+                    <input type="text" ng-model="Date" />
                 </td>
                 <td></td>
                 <td>
-                    <input type="button" class="btn btn-default" value="Save" ng-click="AddUpdateBook()" />
+                    <input type="button" class="btn btn-default" value="Save" ng-click="AddUpdateOrder()" />
                     <input type="button" class="btn btn-danger" value="Cancel" ng-click="Cancel()" />
                 </td>
             </tr>

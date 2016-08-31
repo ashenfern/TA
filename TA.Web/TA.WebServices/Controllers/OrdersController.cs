@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TA.Data;
 
 namespace TA.WebServices.Controllers
 {
@@ -22,8 +23,9 @@ namespace TA.WebServices.Controllers
         }
 
         // POST api/orders
-        public void Post([FromBody]string value)
+        public void Post(Order value)
         {
+
         }
 
         // PUT api/orders/5

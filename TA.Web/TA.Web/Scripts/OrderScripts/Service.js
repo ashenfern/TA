@@ -1,51 +1,51 @@
 ﻿app.service("crudAJService", function ($http) {
 
     //get All Books
-    this.getBooks = function () {
-        return $http.get("Home/GetAllBooks");
+    this.getOrders = function () {
+        return $http.get("Home/GetAllOrders");
     };
 
-    // get Book by bookId
-    this.getBook = function (bookId) {
+    // get Order by orderId
+    this.getOrder = function (orderId) {
         var response = $http({
             method: "post",
-            url: "Home/GetBookById",
+            url: "Home/GetOrderById",
             params: {
-                id: JSON.stringify(bookId)
+                id: JSON.stringify(orderId)
             }
         });
         return response;
     }
 
-    // Update Book 
-    this.updateBook = function (book) {
+    // Update order 
+    this.updateOrder = function (order) {
         var response = $http({
             method: "post",
-            url: "Home/UpdateBook",
-            data: JSON.stringify(book),
+            url: "Home/UpdateOrder",
+            data: JSON.stringify(order),
             dataType: "json"
         });
         return response;
     }
 
-    // Add Book
-    this.AddBook = function (book) {
+    // Add order
+    this.AddOrder = function (order) {
         var response = $http({
             method: "post",
-            url: "http://localhost:13822/api/Orders",
-            data: JSON.stringify(book),
+            url: "Home/AddOrder",
+            data: JSON.stringify(order),
             dataType: "json"
         });
         return response;
     }
 
-    //Delete Book
-    this.DeleteBook = function (bookId) {
+    //Delete order
+    this.DeleteOrder = function (orderId) {
         var response = $http({
             method: "post",
-            url: "Home/DeleteBook",
+            url: "Home/DeleteOrder",
             params: {
-                bookId: JSON.stringify(bookId)
+                bookId: JSON.stringify(orderId)
             }
         });
         return response;
