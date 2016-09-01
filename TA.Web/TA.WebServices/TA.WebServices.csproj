@@ -195,6 +195,10 @@
       <Project>{41d78e8b-609c-4878-9e3c-dd36ccd768b0}</Project>
       <Name>TA.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TA.WebServicesManager\TA.WebServicesManager.csproj">
+      <Project>{9b99174a-c7e6-454c-820e-267cec64205b}</Project>
+      <Name>TA.WebServicesManager</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

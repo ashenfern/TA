@@ -16,3 +16,12 @@ D:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\bin\Debug\EntityFramework.xml
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\bin\Debug\EntityFramework.SqlServer.xml
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\obj\Debug\TA.Data.dll
 D:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\obj\Debug\TA.Data.pdb
+C:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\bin\Debug\TA.Data.dll.config
+C:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\bin\Debug\TA.Data.dll
+C:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\bin\Debug\TA.Data.pdb
+C:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\bin\Debug\EntityFramework.dll
+C:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\bin\Debug\EntityFramework.xml
+C:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\obj\Debug\TA.Data.dll
+C:\Ashen\Development\GitHub\TA\TA.Web\TA.Data\obj\Debug\TA.Data.pdb

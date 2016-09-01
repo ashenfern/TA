@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.Web", "TA.Web\TA.Web.csproj", "{1CFE7AAC-DC3B-4E72-A07D-5722C683DA3A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.Data", "TA.Data\TA.Data.csproj", "{41D78E8B-609C-4878-9E3C-DD36CCD768B0}"
@@ -16,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.WebServices", "TA.WebServices\TA.WebServices.csproj", "{19E7FE9F-2EDB-48EC-889D-0B290C189227}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.WebServices.Tests", "TA.WebServices.Tests\TA.WebServices.Tests.csproj", "{CC424F4A-9968-4865-9C2F-AEF2030E63BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.WebServicesManager", "TA.WebServicesManager\TA.WebServicesManager.csproj", "{9B99174A-C7E6-454C-820E-267CEC64205B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +51,10 @@ Global
 		{CC424F4A-9968-4865-9C2F-AEF2030E63BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC424F4A-9968-4865-9C2F-AEF2030E63BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC424F4A-9968-4865-9C2F-AEF2030E63BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B99174A-C7E6-454C-820E-267CEC64205B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B99174A-C7E6-454C-820E-267CEC64205B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B99174A-C7E6-454C-820E-267CEC64205B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B99174A-C7E6-454C-820E-267CEC64205B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
