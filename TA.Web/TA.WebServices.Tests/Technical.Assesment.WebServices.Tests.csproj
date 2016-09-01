@@ -109,13 +109,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TA.Data\TA.Data.csproj">
+    <ProjectReference Include="..\TA.Data\Technical.Assesment.Data.csproj">
       <Project>{41d78e8b-609c-4878-9e3c-dd36ccd768b0}</Project>
-      <Name>TA.Data</Name>
+      <Name>Technical.Assesment.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TA.WebServices\TA.WebServices.csproj">
+    <ProjectReference Include="..\TA.WebServices\Technical.Assesment.WebServices.csproj">
       <Project>{19E7FE9F-2EDB-48EC-889D-0B290C189227}</Project>
-      <Name>TA.WebServices</Name>
+      <Name>Technical.Assesment.WebServices</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

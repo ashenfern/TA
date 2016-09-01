@@ -1015,13 +1015,13 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TA.Business\TA.Business.csproj">
+    <ProjectReference Include="..\TA.Business\Technical.Assesment.Business.csproj">
       <Project>{2f0c41b6-2f7b-4655-a0df-a6b854e29736}</Project>
-      <Name>TA.Business</Name>
+      <Name>Technical.Assesment.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TA.Data\TA.Data.csproj">
+    <ProjectReference Include="..\TA.Data\Technical.Assesment.Data.csproj">
       <Project>{41d78e8b-609c-4878-9e3c-dd36ccd768b0}</Project>
-      <Name>TA.Data</Name>
+      <Name>Technical.Assesment.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

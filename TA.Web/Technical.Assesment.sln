@@ -1,21 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.Web", "TA.Web\TA.Web.csproj", "{1CFE7AAC-DC3B-4E72-A07D-5722C683DA3A}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technical.Assesment.Web", "TA.Web\Technical.Assesment.Web.csproj", "{1CFE7AAC-DC3B-4E72-A07D-5722C683DA3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.Data", "TA.Data\TA.Data.csproj", "{41D78E8B-609C-4878-9E3C-DD36CCD768B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technical.Assesment.Data", "TA.Data\Technical.Assesment.Data.csproj", "{41D78E8B-609C-4878-9E3C-DD36CCD768B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.Business", "TA.Business\TA.Business.csproj", "{2F0C41B6-2F7B-4655-A0DF-A6B854E29736}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technical.Assesment.Business", "TA.Business\Technical.Assesment.Business.csproj", "{2F0C41B6-2F7B-4655-A0DF-A6B854E29736}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.Web.Tests", "TA.Web.Tests\TA.Web.Tests.csproj", "{1839700A-2979-4FBD-9AF7-E79BE8E66874}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technical.Assesment.Web.Tests", "TA.Web.Tests\Technical.Assesment.Web.Tests.csproj", "{1839700A-2979-4FBD-9AF7-E79BE8E66874}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.ServiceFacade", "TA.ServiceFacade\TA.ServiceFacade.csproj", "{4F5C2ECD-6922-4E67-B081-A4AE328C7626}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technical.Assesment.ServiceFacade", "TA.ServiceFacade\Technical.Assesment.ServiceFacade.csproj", "{4F5C2ECD-6922-4E67-B081-A4AE328C7626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.WebServices", "TA.WebServices\TA.WebServices.csproj", "{19E7FE9F-2EDB-48EC-889D-0B290C189227}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technical.Assesment.WebServices", "TA.WebServices\Technical.Assesment.WebServices.csproj", "{19E7FE9F-2EDB-48EC-889D-0B290C189227}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.WebServices.Tests", "TA.WebServices.Tests\TA.WebServices.Tests.csproj", "{CC424F4A-9968-4865-9C2F-AEF2030E63BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technical.Assesment.WebServices.Tests", "TA.WebServices.Tests\Technical.Assesment.WebServices.Tests.csproj", "{CC424F4A-9968-4865-9C2F-AEF2030E63BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.WebServicesManager", "TA.WebServicesManager\TA.WebServicesManager.csproj", "{9B99174A-C7E6-454C-820E-267CEC64205B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technical.Assesment.WebServicesManager", "TA.WebServicesManager\Technical.Assesment.WebServicesManager.csproj", "{9B99174A-C7E6-454C-820E-267CEC64205B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

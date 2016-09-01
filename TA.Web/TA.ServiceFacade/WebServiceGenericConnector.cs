@@ -11,54 +11,9 @@ namespace TA.ServiceFacade
 {
     public class WebServiceGenericConnector<T>
     {
-        //readonly static string webUrl = "http://localhost:11737/api/patient";            //web api url
-        //readonly static string webUrl = "http://192.168.1.30:8280/patientapi/patient/";     //esb expoed url
-
-        //RestClient client = new RestClient(baseURL);
-
-        readonly static string baseURL = "http://localhost:13822/"; //Base URL - Resource based access
+      
+        readonly static string baseURL = "http://localhost:13822/"; //TO DO get it from the config
         public string Resource { get; set; }
-
-        //public List<T> GetResult()
-        //{
-        //    string uri = "";
-        //    var request = new RestRequest(Resource, Method.GET);
-        //    var queryResult = client.Execute<List<T>>(request).Data;
-        //    return queryResult == null ? new List<T>() : queryResult; ;
-        //}
-
-        //public T GetResultById(int id)
-        //{
-        //    string uri = Resource + id + "/";
-        //    var request = new RestRequest(uri, Method.GET);
-        //    var queryResult = client.Execute<List<T>>(request).Data;
-        //    queryResult = queryResult == null ? new List<T>() : queryResult;
-        //    return queryResult.FirstOrDefault();
-        //}
-
-        //public void CreateResult(T data)
-        //{
-        //    var request = new RestRequest(Resource, Method.POST);
-        //    request.RequestFormat = DataFormat.Json;
-        //    request.AddBody(data);
-        //    client.Execute(request);
-        //}
-
-        //public void UpdateResult(T data)
-        //{
-        //    var request = new RestRequest(Resource, Method.PUT);
-        //    request.RequestFormat = DataFormat.Json;
-        //    request.AddBody(data);
-        //    client.Execute(request);
-        //}
-
-        //public void DeleteResult(int id)
-        //{
-        //    var request = new RestRequest(Resource + id + "/", Method.DELETE);
-        //    request.RequestFormat = DataFormat.Json;
-        //    request.AddBody(id);
-        //    client.Execute(request);
-        //}
 
         public T GetData(int id = -1)
         {

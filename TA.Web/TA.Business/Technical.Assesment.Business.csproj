@@ -43,13 +43,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TA.Data\TA.Data.csproj">
+    <ProjectReference Include="..\TA.Data\Technical.Assesment.Data.csproj">
       <Project>{41d78e8b-609c-4878-9e3c-dd36ccd768b0}</Project>
-      <Name>TA.Data</Name>
+      <Name>Technical.Assesment.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TA.ServiceFacade\TA.ServiceFacade.csproj">
+    <ProjectReference Include="..\TA.ServiceFacade\Technical.Assesment.ServiceFacade.csproj">
       <Project>{4f5c2ecd-6922-4e67-b081-a4ae328c7626}</Project>
-      <Name>TA.ServiceFacade</Name>
+      <Name>Technical.Assesment.ServiceFacade</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
