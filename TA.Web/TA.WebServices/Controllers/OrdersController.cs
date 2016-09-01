@@ -19,7 +19,7 @@ namespace TA.WebServices.Controllers
 
         // GET api/Orders
         public IList<Order> GetOrders()
-        {
+        {        
             //return db.order.ToList();
             return orderManager.GetOrders();
         }
