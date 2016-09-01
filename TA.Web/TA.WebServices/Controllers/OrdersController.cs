@@ -36,10 +36,11 @@ namespace TA.WebServices.Controllers
             //Add order to direct Database
             orderManager.AddOrdersToDb(order);
 
+            const string queueOrderName = @".\private$\OrderQueue";
+            const string queueEmailName = @".\private$\EmailQueue";
 
-            const string queueName = @".\private$\TestQueue";
-            
-            orderManager.AddOrdersToMSMQ(order,queueName);
+            orderManager.AddOrdersToMSMQ(order, queueOrderName);
+            orderManager.AddOrdersToMSMQ(order, queueEmailName);
 
             return CreatedAtRoute("DefaultApi", new { id = order.Id }, order);
         }

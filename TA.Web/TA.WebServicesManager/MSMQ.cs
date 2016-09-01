@@ -25,14 +25,7 @@ namespace TA.WebServicesManager
 
             try
             {
-                // msMq.Send("Sending data to MSMQ at " + DateTime.Now.ToString());
-                //Person p = new Person()
-                //{
-                //    FirstName = "ITFunda",
-                //    LastName = ".Com"
-                //};
                 msMq.Send(order);
-
             }
             catch (MessageQueueException ee)
             {
@@ -46,7 +39,7 @@ namespace TA.WebServicesManager
             {
                 msMq.Close();
             }
-            Console.WriteLine("Message sent ......");
+            //Console.WriteLine("Message sent ......");
         }
 
         public Order Dequeue(string QueueName)
