@@ -14,5 +14,10 @@ namespace TA.Business
         {
             new OrderServiceFacade().AddOrder(order);
         }
+
+        public List<Order> GetOrders()
+        {
+            return new OrderServiceFacade().GetOrders();
+        }
     }
 }

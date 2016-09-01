@@ -11,6 +11,14 @@ namespace TA.ServiceFacade
     {
         WebServiceGenericConnector<Order> service = new WebServiceGenericConnector<Order>();
 
+        public List<Order> GetOrders()
+        {
+            service.Resource = "api/Orders/";
+            var data = service.GetDataList();
+
+            return data;
+        }
+
         public bool AddOrder(Order order)
         {
             service.Resource = "api/Orders/";

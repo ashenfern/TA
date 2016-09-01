@@ -20,12 +20,17 @@ namespace TA.Web.Controllers
         // GET: All orders
         public JsonResult GetAllOrders()
         {
-            using (OrderDBContext contextObj = new OrderDBContext())
-            {
-                var orderList = contextObj.order.ToList();
-                return Json(orderList, JsonRequestBehavior.AllowGet);
-            }
+            //using (OrderDBContext contextObj = new OrderDBContext())
+            //{
+            //    var orderList = contextObj.order.ToList();
+            //    return Json(orderList, JsonRequestBehavior.AllowGet);
+            //}
+
+            var result = new OrderBusinessManager().GetOrders();
+
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
+
         //GET: Order by Id
         public JsonResult GetOrderById(string id)
         {
@@ -36,7 +41,8 @@ namespace TA.Web.Controllers
                 return Json(getOrderById, JsonRequestBehavior.AllowGet);
             }
         }
-        //Update Book
+
+        //Update Order
         //public string UpdateOrder(Order order)
         //{
         //    if (order != null)

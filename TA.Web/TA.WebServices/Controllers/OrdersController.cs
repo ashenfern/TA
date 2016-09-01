@@ -1,41 +1,117 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 using TA.Data;
 
 namespace TA.WebServices.Controllers
 {
     public class OrdersController : ApiController
     {
-        // GET api/orders
-        public IEnumerable<string> Get()
+        private OrderDBContext db = new OrderDBContext();
+
+        // GET api/Orders
+        public IList<Order> Getorder()
         {
-            return new string[] { "value1", "value2" };
+            return db.order.ToList();
         }
 
-        // GET api/orders/5
-        public string Get(int id)
+        // GET api/Orders/5
+        [ResponseType(typeof(Order))]
+        public IHttpActionResult GetOrder(int id)
         {
-            return "value";
+            Order order = db.order.Find(id);
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(order);
         }
 
-        // POST api/orders
-        public void Post(Order value)
+        // PUT api/Orders/5
+        public IHttpActionResult PutOrder(int id, Order order)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
+            if (id != order.Id)
+            {
+                return BadRequest();
+            }
+
+            db.Entry(order).State = EntityState.Modified;
+
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!OrderExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // PUT api/orders/5
-        public void Put(int id, [FromBody]string value)
+        // POST api/Orders
+        [ResponseType(typeof(Order))]
+        public IHttpActionResult PostOrder(Order order)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            db.order.Add(order);
+            db.SaveChanges();
+
+            return CreatedAtRoute("DefaultApi", new { id = order.Id }, order);
         }
 
-        // DELETE api/orders/5
-        public void Delete(int id)
+        // DELETE api/Orders/5
+        [ResponseType(typeof(Order))]
+        public IHttpActionResult DeleteOrder(int id)
         {
+            Order order = db.order.Find(id);
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            db.order.Remove(order);
+            db.SaveChanges();
+
+            return Ok(order);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private bool OrderExists(int id)
+        {
+            return db.order.Count(e => e.Id == id) > 0;
         }
     }
 }
