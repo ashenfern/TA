@@ -7,7 +7,7 @@ using TA.Data;
 
 namespace TA.WebServicesManager
 {
-    interface IQueue
+    public interface IQueue
     {
         void Enqueue(Order item, string QueueName);
         Order Dequeue(string QueueName);

@@ -9,7 +9,19 @@ namespace TA.WebServicesManager
 {
     public class OrderManager
     {
-        private OrderDBContext db = new OrderDBContext();
+        private OrderDBContext db;
+        private IQueue queue;
+
+        public OrderManager(IQueue _queue, OrderDBContext _db)
+        {
+            queue = _queue;
+            db = _db;
+        }
+
+        public void AddOrdersQueue(Order order, string queueName)
+        {
+            queue.Enqueue(order, queueName);
+        }
 
         public IList<Order> GetOrders()
         {
@@ -22,12 +34,7 @@ namespace TA.WebServicesManager
             db.SaveChanges();
         }
 
-        public void AddOrdersToMSMQ(Order order, string queueName)
-        {
-            IQueue queue = new MSMQ();
-
-            queue.Enqueue(order,queueName);
-        }
+       
 
     }
 }

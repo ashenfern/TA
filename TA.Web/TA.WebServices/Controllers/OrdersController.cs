@@ -15,7 +15,7 @@ namespace TA.WebServices.Controllers
 {
     public class OrdersController : ApiController
     {
-        private OrderManager orderManager = new OrderManager();
+        private OrderManager orderManager = new OrderManager(new MSMQ(), new OrderDBContext());
 
         // GET api/Orders
         public IList<Order> GetOrders()
@@ -39,8 +39,8 @@ namespace TA.WebServices.Controllers
             const string queueOrderName = @".\private$\Order_Queue";
             const string queueEmailName = @".\private$\Email_Queue";
 
-            orderManager.AddOrdersToMSMQ(order, queueOrderName);
-            orderManager.AddOrdersToMSMQ(order, queueEmailName);
+            orderManager.AddOrdersQueue(order, queueOrderName);
+            orderManager.AddOrdersQueue(order, queueEmailName);
 
             return CreatedAtRoute("DefaultApi", new { id = order.Id }, order);
         }
