@@ -36,8 +36,8 @@ namespace TA.WebServices.Controllers
             //Add order to direct Database
             orderManager.AddOrdersToDb(order);
 
-            const string queueOrderName = @".\private$\OrderQueue";
-            const string queueEmailName = @".\private$\EmailQueue";
+            const string queueOrderName = @".\private$\Order_Queue";
+            const string queueEmailName = @".\private$\Email_Queue";
 
             orderManager.AddOrdersToMSMQ(order, queueOrderName);
             orderManager.AddOrdersToMSMQ(order, queueEmailName);
