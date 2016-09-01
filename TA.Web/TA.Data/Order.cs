@@ -14,6 +14,7 @@ namespace TA.Data
         public string Description { get; set; }
         //TODO
         public string CustomerName { get; set; }
+        //TODO
         public string CustomerAddress { get; set; }
         //TODO
         public string ItemName { get; set; }

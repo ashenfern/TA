@@ -9,7 +9,7 @@ using TA.Web.Models;
 
 namespace TA.Web.Controllers
 {
-    public class HomeController : Controller
+    public class OrdersController : Controller
     {
         // GET: Order
         public ActionResult Index()

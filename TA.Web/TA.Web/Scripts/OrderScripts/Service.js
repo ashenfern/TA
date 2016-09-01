@@ -2,14 +2,14 @@
 
     //get All Books
     this.getOrders = function () {
-        return $http.get("Home/GetAllOrders");
+        return $http.get("Orders/GetAllOrders");
     };
 
     // get Order by orderId
     this.getOrder = function (orderId) {
         var response = $http({
             method: "post",
-            url: "Home/GetOrderById",
+            url: "Orders/GetOrderById",
             params: {
                 id: JSON.stringify(orderId)
             }
@@ -21,7 +21,7 @@
     this.updateOrder = function (order) {
         var response = $http({
             method: "post",
-            url: "Home/UpdateOrder",
+            url: "Orders/UpdateOrder",
             data: JSON.stringify(order),
             dataType: "json"
         });
@@ -32,7 +32,7 @@
     this.AddOrder = function (order) {
         var response = $http({
             method: "post",
-            url: "Home/AddOrder",
+            url: "Orders/AddOrder",
             data: JSON.stringify(order),
             dataType: "json"
         });
@@ -43,7 +43,7 @@
     this.DeleteOrder = function (orderId) {
         var response = $http({
             method: "post",
-            url: "Home/DeleteOrder",
+            url: "Order/DeleteOrder",
             params: {
                 bookId: JSON.stringify(orderId)
             }
