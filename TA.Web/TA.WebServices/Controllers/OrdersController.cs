@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -15,7 +16,19 @@ namespace TA.WebServices.Controllers
 {
     public class OrdersController : ApiController
     {
-        private OrderManager orderManager = new OrderManager(new MSMQ(), new OrderDBContext());
+        private OrderManager orderManager;
+
+        public OrdersController()
+        {
+            //Using Unity DI framework to create orderManager. Avoding using new OrderManager(new MSMQ(), new OrderDBContext())
+            IUnityContainer container = new UnityContainer();
+            container.RegisterType<OrderManager>();
+            container.RegisterType<IQueue, SBQ>();
+            container.RegisterType<IQueue, MSMQ>();
+            container.RegisterType<OrderDBContext, OrderDBContext>();
+
+            orderManager = container.Resolve<OrderManager>();
+        }
 
         // GET api/Orders
         public IList<Order> GetOrders()
@@ -36,10 +49,13 @@ namespace TA.WebServices.Controllers
             //Add order to direct Database
             orderManager.AddOrdersToDb(order);
 
+            //TODO Get these from the config
             const string queueOrderName = @".\private$\Order_Queue";
             const string queueEmailName = @".\private$\Email_Queue";
 
+            //Adding order to Order Queue
             orderManager.AddOrdersQueue(order, queueOrderName);
+            //Adding order to Email Queue
             orderManager.AddOrdersQueue(order, queueEmailName);
 
             return CreatedAtRoute("DefaultApi", new { id = order.Id }, order);
