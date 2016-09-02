@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technical.Assesment.WebServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technical.Assesment.WebServicesManager", "TA.WebServicesManager\Technical.Assesment.WebServicesManager.csproj", "{9B99174A-C7E6-454C-820E-267CEC64205B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technical.Assesment.WindowsServiceDemo", "Technical.Assesment.WindowsServiceDemo\Technical.Assesment.WindowsServiceDemo.csproj", "{2ED13B57-0FD2-4B13-BA0A-AC1FB564AC88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{9B99174A-C7E6-454C-820E-267CEC64205B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B99174A-C7E6-454C-820E-267CEC64205B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B99174A-C7E6-454C-820E-267CEC64205B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED13B57-0FD2-4B13-BA0A-AC1FB564AC88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED13B57-0FD2-4B13-BA0A-AC1FB564AC88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED13B57-0FD2-4B13-BA0A-AC1FB564AC88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED13B57-0FD2-4B13-BA0A-AC1FB564AC88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

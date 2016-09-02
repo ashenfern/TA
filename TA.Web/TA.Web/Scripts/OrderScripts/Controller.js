@@ -1,10 +1,10 @@
-﻿app.controller("mvcCRUDCtrl", function ($scope, crudAJService) {
+﻿app.controller("OrdersController", function ($scope, OrdersService) {
     $scope.divOrder = false;
     GetAllOrders();
     //To Get all book records  
     function GetAllOrders() {
         debugger;
-        var getOrderData = crudAJService.getOrders();
+        var getOrderData = OrdersService.getOrders();
         getOrderData.then(function (order) {
             $scope.orders = order.data;
         }, function () {
@@ -13,7 +13,7 @@
     }
 
     $scope.editOrder = function (order) {
-        var getOrderData = crudAJService.getOrder(order.Id);
+        var getOrderData = OrdersService.getOrder(order.Id);
         getOrderData.then(function (_order) {
             $scope.oreder = _oreder.data;
             $scope.orderId = order.Id;
@@ -44,7 +44,7 @@
 
         if (getorderAction == "Update") {
             Order.Id = $scope.bookId;
-            var getOrderData = crudAJService.updateOrder(Order);
+            var getOrderData = OrdersService.updateOrder(Order);
             getOrderData.then(function (msg) {
                 GetAllOrders();
                 alert(msg.data);
@@ -53,7 +53,7 @@
                 alert('Error in updating order record');
             });
         } else {
-            var getOrderData = crudAJService.AddOrder(Order);
+            var getOrderData = OrdersService.AddOrder(Order);
             getOrderData.then(function (msg) {
                 GetAllOrders();
                 alert(msg.data);
@@ -71,7 +71,7 @@
     }
 
     $scope.deleteOrder = function (order) {
-        var getOrderData = crudAJService.DeleteOrder(order.Id);
+        var getOrderData = OrdersService.DeleteOrder(order.Id);
         getOrderData.then(function (msg) {
             alert(msg.data);
             GetAllOrders();

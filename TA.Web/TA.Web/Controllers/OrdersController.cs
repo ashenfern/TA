@@ -20,11 +20,6 @@ namespace TA.Web.Controllers
         // GET: All orders
         public JsonResult GetAllOrders()
         {
-            //using (OrderDBContext contextObj = new OrderDBContext())
-            //{
-            //    var orderList = contextObj.order.ToList();
-            //    return Json(orderList, JsonRequestBehavior.AllowGet);
-            //}
 
             var result = new OrderBusinessManager().GetOrders();
 

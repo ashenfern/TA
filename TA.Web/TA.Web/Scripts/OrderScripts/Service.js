@@ -1,4 +1,4 @@
-﻿app.service("crudAJService", function ($http) {
+﻿app.service("OrdersService", function ($http) {
 
     //get All Books
     this.getOrders = function () {
