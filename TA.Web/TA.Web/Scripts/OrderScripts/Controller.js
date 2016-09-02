@@ -56,7 +56,7 @@
             var getOrderData = OrdersService.AddOrder(Order);
             getOrderData.then(function (msg) {
                 GetAllOrders();
-                alert(msg.data);
+                //alert(msg.data);
                 $scope.divOrder = false;
             }, function () {
                 alert('Error in adding order record');
