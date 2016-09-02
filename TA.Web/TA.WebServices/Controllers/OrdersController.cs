@@ -50,13 +50,13 @@ namespace TA.WebServices.Controllers
             orderManager.AddOrdersToDb(order);
 
             //TODO Get these from the config
-            const string queueOrderName = @".\private$\Order_Queue";
-            const string queueEmailName = @".\private$\Email_Queue";
+            const string orderQueue = @".\private$\Order_Queue";
+            const string emailQueue = @".\private$\Email_Queue";
 
             //Adding order to Order Queue
-            orderManager.AddOrdersQueue(order, queueOrderName);
+            orderManager.SendMessageToQueue(order, orderQueue);
             //Adding order to Email Queue
-            orderManager.AddOrdersQueue(order, queueEmailName);
+            orderManager.SendMessageToQueue(order, emailQueue);
 
             return CreatedAtRoute("DefaultApi", new { id = order.Id }, order);
         }

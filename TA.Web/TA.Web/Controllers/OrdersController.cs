@@ -37,42 +37,8 @@ namespace TA.Web.Controllers
             }
         }
 
-        //Update Order
-        //public string UpdateOrder(Order order)
-        //{
-        //    if (order != null)
-        //    {
-        //        using (OrderDBContext contextObj = new OrderDBContext())
-        //        {
-        //            int orderId = Convert.ToInt32(order.Id);
-        //            Order _order = contextObj.order.Where(b => b.Id == orderId).FirstOrDefault();
-
-        //            contextObj.SaveChanges();
-        //            return "Order record updated successfully";
-        //        }
-        //    }
-        //    else
-        //    {
-        //        return "Invalid order record";
-        //    }
-        //}
-        // Add book
         public void AddOrder(Order order)
         {
-            //if (order != null)
-            //{
-            //    using (OrderDBContext contextObj = new OrderDBContext())
-            //    {
-            //        contextObj.order.Add(order);
-            //        contextObj.SaveChanges();
-            //        return "Order record added successfully";
-            //    }
-            //}
-            //else
-            //{
-            //    return "Invalid order record";
-            //}
-
             new OrderBusinessManager().AddOrder(order);
         }
         // Delete book

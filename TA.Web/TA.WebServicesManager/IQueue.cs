@@ -10,6 +10,6 @@ namespace TA.WebServicesManager
     public interface IQueue
     {
         void Enqueue(Order item, string QueueName);
-        Order Dequeue(string QueueName);
+        List<Order> Dequeue(string QueueName);
     }
 }

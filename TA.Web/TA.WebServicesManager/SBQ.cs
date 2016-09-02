@@ -14,7 +14,7 @@ namespace TA.WebServicesManager
             throw new NotImplementedException();
         }
 
-        public Order Dequeue(string queueName)
+        public List<Order> Dequeue(string queueName)
         {
             throw new NotImplementedException();
         }

@@ -42,9 +42,51 @@ namespace TA.WebServicesManager
             //Console.WriteLine("Message sent ......");
         }
 
-        public Order Dequeue(string QueueName)
+        public List<Order> Dequeue(string queueName)
         {
-            throw new NotImplementedException();
+            MessageQueue msMq = new MessageQueue(queueName);
+            List<Order> orderList = new List<Order>();
+
+            try
+            {
+                msMq.Formatter = new XmlMessageFormatter(new Type[] { typeof(Order) });
+
+                // Populate an array with copies of all the messages in the queue.
+                Message[] msgs = msMq.GetAllMessages();
+
+                foreach (var item in msgs)
+                {
+                    var message = (Order)msMq.Receive().Body;
+                    orderList.Add(message);
+                }
+
+                return orderList;
+
+                // Console.WriteLine(message.Body.ToString());
+            }
+            catch (MessageQueueException ee)
+            {
+
+                Console.Write(ee.ToString());
+
+            }
+
+            catch (Exception eee)
+            {
+
+                Console.Write(eee.ToString());
+
+            }
+
+            finally
+            {
+
+                msMq.Close();
+
+            }
+
+            return new List<Order>();
+            //Console.WriteLine("Message received ......");
         }
     }
 }

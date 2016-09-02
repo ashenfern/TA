@@ -18,9 +18,14 @@ namespace TA.WebServicesManager
             db = _db;
         }
 
-        public void AddOrdersQueue(Order order, string queueName)
+        public void SendMessageToQueue(Order order, string queueName)
         {
             queue.Enqueue(order, queueName);
+        }
+
+        public List<Order> ReceiveMessageFromQueue(string queueName)
+        {
+           return queue.Dequeue(queueName);
         }
 
         public IList<Order> GetOrders()
